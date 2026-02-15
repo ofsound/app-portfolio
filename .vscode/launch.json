@@ -16,7 +16,11 @@
       "runtimeArgs": ["--remote-debugging-port=9222"],
       "sourceMaps": true,
       "resolveSourceMapLocations": [
-        "!**/chrome-extension://**" // Exclude Chrome extensions
+        "**",
+        "!**/chrome-extension://**",
+        "!**/node_modules/**",
+        "!**/_next/**",
+        "!**/turbopack*"
       ]
     }
   ]
