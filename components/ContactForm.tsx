@@ -22,7 +22,7 @@ export function ContactForm() {
           Thanks! Your message has been sent. I&apos;ll get back to you soon.
         </p>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
             <label
               htmlFor="name"

@@ -17,7 +17,7 @@ export default function Contact() {
         Drop a line or find me elsewhere on the web.
       </p>
 
-      <div className="space-y-12">
+      <div className="flex flex-col gap-12">
         <ContactForm />
 
         <section>
