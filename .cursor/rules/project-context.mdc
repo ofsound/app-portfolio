@@ -1,0 +1,31 @@
+---
+description: Project tech stack, Next.js MCP usage, import order
+alwaysApply: true
+---
+
+# Project Context
+
+- **Stack**: Next.js 16, React 19, TypeScript, Tailwind CSS v4
+- **Styling**: Tailwind only; avoid vanilla CSS in `<style>` blocks
+
+## Next.js MCP Tools
+
+- **`nextjs_init`**: Call FIRST at session start (or when working on Next.js)
+- **`nextjs_docs`**: Fetch official docs — read `nextjs-docs://llms-index` for correct paths before querying
+- **`nextjs_index`**: Discover running dev servers and available MCP tools
+- **`nextjs_call`**: Invoke tools on a running server (get_errors, routes, cache, etc.)
+- **`browser_eval`**: Load pages in a real browser to verify runtime behavior and catch hydration issues
+- Do **not** use playground links for code written to project files
+
+## Import Order
+
+When adding or editing explicit imports in `.tsx` or `.ts` files, enforce this order. Use **one blank line between groups**; no blank line between imports within a group.
+
+1. **React / Next.js** — `react`, `next`, `next/link`, `next/image`, `next/navigation`, etc.
+2. **External packages**
+3. **Project** — `@/components/...`, `@/lib/...`, then local `./...` or `../...`
+4. **Types** — all `import type { ... }`
+5. **Assets** — `@/` for app root when present
+6. **Side-effect** — e.g. `import "./globals.css"`; must be last
+
+Path alias `@/*` maps to project root. If a module is imported for both type and value, keep one import line and place it by its primary use.

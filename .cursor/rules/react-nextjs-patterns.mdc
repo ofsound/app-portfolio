@@ -1,0 +1,44 @@
+---
+description: React 19 and Next.js 16 best practices — App Router, Server Components, Client Components
+globs: "**/*.tsx,app/**/*.tsx,components/**/*.tsx"
+alwaysApply: false
+---
+
+# React 19 + Next.js 16 Patterns
+
+## Server vs Client Components
+
+- **Server Components** (default): No `"use client"`. Async allowed; no hooks or browser APIs.
+- **Client Components**: Add `"use client"` at top when you need `useState`, `useEffect`, event handlers, or browser APIs.
+- Prefer Server Components; use Client Components only when necessary.
+
+## Components
+
+- Place reusable components in `components/` at project root
+- Use PascalCase for component names
+- Prefer function components with explicit return types where helpful
+
+## Data Fetching
+
+- **Server Components**: Fetch directly with `fetch` (Next.js extends with caching) or async/await. No need for `useEffect` to fetch.
+- **Route Handlers**: Use `app/api/` for API endpoints (GET, POST, etc.)
+
+## Routing
+
+- File-based routing under `app/` with `page.tsx`, `layout.tsx`
+- Use `<Link>` from `next/link` for client-side navigation
+- Use `useRouter`, `usePathname`, `useSearchParams` from `next/navigation` in Client Components
+
+## Metadata
+
+- Export `metadata` or `generateMetadata` from `layout.tsx` or `page.tsx` for SEO and head tags
+
+## Styling
+
+- Use Tailwind utility classes in `className`
+- Avoid `@apply` unless necessary; prefer utility-first
+
+## Environment and Config
+
+- Use `process.env` for env vars; prefix client-exposed vars with `NEXT_PUBLIC_`
+- Never hardcode secrets

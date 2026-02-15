@@ -1,0 +1,11 @@
+---
+description: Tailwind v4 conventions — no space-y/space-x; use flex + gap
+globs: "**/*.tsx,**/*.ts,app/**/*.tsx,app/**/*.ts,components/**/*.tsx,lib/**/*.ts"
+alwaysApply: false
+---
+
+# Tailwind
+
+- Use Tailwind CSS v4 for styling; avoid vanilla CSS in `<style>` blocks
+- Do **not** use `space-y-*` or `space-x-*`; use flex or grid with `gap-*` instead
+- Tailwind uses `@tailwindcss/postcss`; global styles go in `app/globals.css`
