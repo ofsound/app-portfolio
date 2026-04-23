@@ -1,37 +1,12 @@
 @import "tailwindcss";
 
-/* Use .dark class (e.g. from next-themes) instead of prefers-color-scheme for dark: utilities */
-@custom-variant dark {
-  &:where(.dark, .dark *) {
-    @slot;
-  }
-}
-
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* Use html.dark / html.light to avoid Tailwind v4 merging .dark and .light into one rule */
-html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-html.light {
-  --background: #ededed;
-  --foreground: #0a0a0a;
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-app);
+  color: var(--color-text);
   font-family: var(--font-sans), system-ui, sans-serif;
 }

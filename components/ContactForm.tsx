@@ -13,12 +13,12 @@ export function ContactForm() {
 
   return (
     <section>
-      <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
+      <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-faint">
         Send a message
       </h2>
 
       {submitted ? (
-        <p className="rounded-lg bg-emerald-50 dark:bg-emerald-900/20 px-4 py-3 text-emerald-700 dark:text-emerald-400">
+        <p className="rounded-lg bg-success-surface px-4 py-3 text-success">
           Thanks! Your message has been sent. I&apos;ll get back to you soon.
         </p>
       ) : (
@@ -26,7 +26,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="name"
-              className="mb-1.5 block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+              className="mb-1.5 block text-sm font-medium text-text-secondary"
             >
               Name
             </label>
@@ -35,14 +35,14 @@ export function ContactForm() {
               name="name"
               type="text"
               required
-              className="w-full rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 px-4 py-2.5 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+              className="w-full rounded-lg border border-input-border bg-input px-4 py-2.5 text-text placeholder:text-input-placeholder focus-visible:border-focus-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring/30"
               placeholder="Your name"
             />
           </div>
           <div>
             <label
               htmlFor="email"
-              className="mb-1.5 block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+              className="mb-1.5 block text-sm font-medium text-text-secondary"
             >
               Email
             </label>
@@ -51,14 +51,14 @@ export function ContactForm() {
               name="email"
               type="email"
               required
-              className="w-full rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 px-4 py-2.5 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+              className="w-full rounded-lg border border-input-border bg-input px-4 py-2.5 text-text placeholder:text-input-placeholder focus-visible:border-focus-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring/30"
               placeholder="you@example.com"
             />
           </div>
           <div>
             <label
               htmlFor="message"
-              className="mb-1.5 block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+              className="mb-1.5 block text-sm font-medium text-text-secondary"
             >
               Message
             </label>
@@ -67,13 +67,13 @@ export function ContactForm() {
               name="message"
               rows={4}
               required
-              className="w-full rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 px-4 py-2.5 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500 resize-none"
+              className="w-full resize-none rounded-lg border border-input-border bg-input px-4 py-2.5 text-text placeholder:text-input-placeholder focus-visible:border-focus-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring/30"
               placeholder="What's on your mind?"
             />
           </div>
           <button
             type="submit"
-            className="rounded-lg bg-zinc-900 dark:bg-zinc-100 px-5 py-2.5 text-sm font-medium text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
+            className="rounded-lg bg-control-primary px-5 py-2.5 text-sm font-medium text-control-primary-text transition-opacity hover:opacity-90"
           >
             Send
           </button>

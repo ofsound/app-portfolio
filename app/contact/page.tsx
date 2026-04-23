@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-12">
-      <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 mb-2">
+      <h1 className="mb-2 text-3xl font-semibold tracking-tight text-text">
         Contact
       </h1>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-10">
+      <p className="mb-10 text-text-secondary">
         Drop a line or find me elsewhere on the web.
       </p>
 
@@ -21,7 +21,7 @@ export default function Contact() {
         <ContactForm />
 
         <section>
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-faint">
             Elsewhere
           </h2>
           <ul className="flex flex-wrap gap-6">
@@ -30,7 +30,7 @@ export default function Contact() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-colors"
+                className="text-link underline underline-offset-4 transition-colors hover:text-link-hover"
               >
                 GitHub
               </a>
@@ -40,7 +40,7 @@ export default function Contact() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-colors"
+                className="text-link underline underline-offset-4 transition-colors hover:text-link-hover"
               >
                 Twitter / X
               </a>
@@ -50,7 +50,7 @@ export default function Contact() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-colors"
+                className="text-link underline underline-offset-4 transition-colors hover:text-link-hover"
               >
                 LinkedIn
               </a>

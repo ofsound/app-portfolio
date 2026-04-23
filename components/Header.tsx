@@ -9,11 +9,11 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="border-b border-zinc-200 dark:border-zinc-800">
+    <header className="border-b border-border-subtle bg-shell">
       <nav className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+          className="text-lg font-semibold tracking-tight text-text transition-colors hover:text-link"
         >
           Portfolio
         </Link>
@@ -23,7 +23,7 @@ export default function Header() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                  className="text-sm font-medium text-text-secondary transition-colors hover:text-text"
                 >
                   {label}
                 </Link>
